@@ -1,0 +1,10 @@
+.circle{
+    width: 55px;
+    height: 55px; 
+    border-radius: 100px;
+  }
+
+  .vl {
+    border-left: 1px solid white;
+    height: 45px;
+  }

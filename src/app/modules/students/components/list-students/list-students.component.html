@@ -1,0 +1,121 @@
+<div class="container">
+    <fieldset>
+    <legend>Sección de Estudiantes</legend>
+
+    <div class="row d-flex align-items-center">
+      <div class="col-sm-4 col-12">
+          <button
+            mat-raised-button
+            [routerLink]="['/home/students/list-applications']"
+            #btnNuevo
+            class="h-75 w-100 btn-dark"
+          >
+          <mat-icon>settings</mat-icon>
+          Gestión de solicitudes
+          </button>
+      </div>
+    </div>
+
+        <br />
+        <div class="row" style="display: table; text-align: center;  margin-left: auto;  margin-right: auto;"> 
+            <mat-label>
+              Estudiantes
+            </mat-label>
+        </div>
+        <br />
+
+    <div class="row">
+      <div class="col-12" style="overflow-x: auto" >
+            <mat-table [dataSource]="dataSource" class="w-100 mat-elevation-z8" matSort>
+                <ng-container matColumnDef="name">
+                    <mat-header-cell class="pr-2" *matHeaderCellDef>
+                      <div class="container">
+                        <div class="row">
+                          <div mat-sort-header>Nombre Personaje</div>
+                        </div>
+                        <div class="row">
+                          <mat-form-field class="w-75 m-0" floatLabel="never">
+                            <mat-label>
+                                <mat-icon matPrefix>search</mat-icon>
+                            </mat-label>
+                            <input matInput [formControl]="name" type="text">
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </mat-header-cell>
+                    <mat-cell class="pr-2" *matCellDef="let character">
+                      {{ character.name }}
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="patronus">
+                    <mat-header-cell class="pr-2" *matHeaderCellDef>
+                      <div class="container">
+                        <div class="row">
+                          <div mat-sort-header>Patronus</div>
+                        </div>
+                        <div class="row">
+                          <mat-form-field class="w-75 m-0" floatLabel="never">
+                            <mat-label>
+                                <mat-icon matPrefix>search</mat-icon>
+                            </mat-label>
+                            <input matInput [formControl]="patronus" type="text">
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </mat-header-cell>
+                    <mat-cell class="pr-2" *matCellDef="let character">
+                      {{ character.patronus }}
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="dateOfBirth">
+                    <mat-header-cell class="pr-2" *matHeaderCellDef>
+                      <div class="container">
+                        <div class="row">
+                          <div mat-sort-header>Edad</div>
+                        </div>
+                        <div class="row">
+                          <mat-form-field class="w-75 m-0" floatLabel="never">
+                            <mat-label>
+                                <mat-icon matPrefix>search</mat-icon>
+                            </mat-label>
+                            <input matInput [formControl]="dateOfBirth" type="text">
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </mat-header-cell>
+                    <mat-cell class="pr-2" *matCellDef="let character">
+                      <label *ngIf= "!isNaN(character.dateOfBirth)">{{ character.dateOfBirth }} </label>
+                      <label *ngIf= "isNaN(character.dateOfBirth)">{{ noAge }}</label>
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="image">
+                    <mat-header-cell class="pr-2" *matHeaderCellDef>
+                      <div class="container">
+                        <div class="row">
+                          <div mat-sort-header>Imagen</div>
+                        </div>
+                      </div>
+                    </mat-header-cell>
+                    <mat-cell class="pr-2" *matCellDef="let character">
+                      <img *ngIf="character.image !== ''" class="imagesize" src="{{ character.image }}" >
+                      <img *ngIf="character.image == ''" class="imagesize" src="../../../../../assets/images/sinimagen/sinimagen.jpg" >
+                    </mat-cell>
+                  </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="studentsColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: studentsColumns"></mat-row>
+            </mat-table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <mat-paginator [pageSizeOptions]="[10, 50, 100]" showFirstLastButtons ></mat-paginator>
+        </div>
+      </div>
+
+</fieldset>
+</div>

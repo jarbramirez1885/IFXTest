@@ -1,0 +1,24 @@
+<mat-drawer-container class="w-100 h-100">
+
+    <mat-drawer-content class="w-100 h-100" style="height: 100%;">
+
+                <div class="fixed-top w-100" style="justify-content: center; min-width: auto;"> 
+                    <app-header></app-header>                  
+                </div>
+                
+                <div class="w-100 mt-xl-5 pt-xl-5 pl-0" style="justify-content: center; min-width: auto; height: 100vh;">   
+                   
+                    <div class="w-100 mt-5 pt-5" style="min-height: 100%;">
+                        <router-outlet></router-outlet>
+                    </div>
+
+                    <div style="position: relative; align-items: flex-end; align-content: flex-end; bottom: 0; width: 100%;">
+                        <app-footer></app-footer>
+                    </div>
+                
+                </div> 
+            
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-loader></app-loader>

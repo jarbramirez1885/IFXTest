@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~material-icons/iconfont/material-icons.css';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+.mat-flat-button{
+  width: 90%;
+  margin: 5px !important;
+}
+
+.mat-raised-button{
+  width: 175px;
+  margin: 5px !important;
+}
+
+.container {
+  margin-top: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.status-button{
+  color: #ffffff;
+  pointer-events: none;
+  width: 75%;
+ overflow: hidden !important;
+ text-overflow: ellipsis;
+}
+
+.active{
+  background-color: #069b17;
+}
+
+.inactive{
+  background-color: #de0108;
+}
+
+fieldset {
+  border: 1px solid #bebace;
+  padding: 2%;
+  border-radius: 1vh;
+}
+
+legend {
+  float: none;
+  color: #d9000d;
+  font-size: 15px;
+  display: table;
+  padding: 0.5%;
+  width: 0%;
+}
+
+.cancel-button{
+  border: 1px #de0107 solid !important;
+  background-color: #ffffff !important;
+  color: #de0108 !important;
+  overflow: hidden !important;
+ text-overflow: ellipsis;
+}
+
+.main-button{
+  border: 1px #de0107 solid !important;
+  background-color: #de0108 !important;
+  color: #ffffff !important;
+  overflow: hidden !important;
+ text-overflow: ellipsis;
+}
+
+.status-button{
+    color: #ffffff;
+    pointer-events: none;
+    width: 75%;
+   overflow: hidden !important;
+   text-overflow: ellipsis;
+}
+
+.active{
+    background-color: #069b17;
+}
+
+.inactive{
+    background-color: #de0108;
+}
+
+fieldset {
+    border: 1px solid #bebace;
+    padding: 2%;
+    border-radius: 1vh;
+}
+
+legend {
+    float: none;
+    color: #d9000d;
+    font-size: 15px;
+    display: table;
+    padding: 0.5%;
+    width: 0%;
+    white-space: nowrap;
+}
+
+.cancel-button{
+    border: 1px #de0107 solid !important;
+    background-color: #ffffff !important;
+    color: #de0108 !important;
+    overflow: hidden !important;
+   text-overflow: ellipsis;
+}
+
+.main-button{
+    border: 1px #de0107 solid !important;
+    background-color: #de0108 !important;
+    color: #ffffff !important;
+    overflow: hidden !important;
+   text-overflow: ellipsis;
+}
+
+.subtitle{
+  font-weight: bold;
+  color: #de0108;
+  font-size: 20px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

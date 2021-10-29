@@ -1,0 +1,40 @@
+<div style="border-bottom: 3px solid red; width: 50vw">
+    <div
+      style="
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      "
+    >
+      <h1 mat-dialog-title>
+        <mat-icon color="primary">{{ icon }}</mat-icon>
+      </h1>
+      <div mat-dialog-content>
+        <p>{{ message }}</p>
+      </div>
+      <div mat-dialog-actions>
+        <button
+          mat-button
+          mat-flat-button
+          color="primary"
+          (click)="clickOk()"
+          #btnOK
+        >
+          {{ data.opc ? "Confirmar" : "Continuar" }}
+        </button>
+        <button
+          mat-button
+          mat-flat-button
+          [hidden]="!cancelVisible"
+          (click)="clickCancel()"
+          #btnCancel
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+  
+    <br />
+  </div>
+  

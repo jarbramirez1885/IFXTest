@@ -1,0 +1,44 @@
+<nav class="navbar fixed navbar-expand-md navbar-dark rounded-0" style="background-color: darkblue;" role="navigation">
+
+    <div class="row inline-block align-item-center w-50 float-left p-1 ml-5" [routerLink]="['./home']">
+          <img src="../assets/images/navbar/image1.jpg" style="width: 350px; height: 90px"> 
+    </div>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="row m-2">
+            <button mat-raised-button class="btn btn-outline-dark" [routerLink]="['/home/characters/list-characters']">
+              <mat-icon> sentiment_satisfied_alt</mat-icon>
+              Personajes
+            </button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="row m-2">
+            <button mat-raised-button class="btn btn-outline-dark" [routerLink]="['/home/students/list-students']">
+              <mat-icon>file_copy</mat-icon>
+              Estudiantes
+            </button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="row m-2">
+            <button mat-raised-button class="btn btn-outline-dark" [routerLink]="['/home/teachers/list-teachers']">
+              <mat-icon>supervisor_account</mat-icon>
+              Profesores
+            </button>
+          </div>
+        </li>
+      </ul>
+          
+    </div>
+             
+</nav>
